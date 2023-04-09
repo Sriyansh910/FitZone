@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cultfit -Mind</title>
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Navebas - with brandlogo -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000000;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/Pikadex/index.html"><img src="/Pikadex/images/Group-13153.svg" alt="1"
+          width="50">cult.fit</a>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">FITNESS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">CARE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/Pikadex/index.html">MIND</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">STORE</a>
+          </li>
+        </ul>
+      </div>
+      <div class="lastpart">
+        <div class="location" id="cityName">
+          <div cursor="default" class="yourCityName">BANGALORE</div>
+          <i class="fa-sharp fa-solid fa-location-crosshairs fa-xl"></i> <!-- location-icon -->
+        </div>
+        <div class="avatar" id="login-user">
+          <i class="fa-regular fa-user fa-xl"></i>  <!-- user-icon -->
+        </div>
+        <div class="cart" id="cartIcon-btn" onclick="openForm()">
+          <i class="fa-solid fa-cart-shopping fa-2xl"></i>  <!-- soppingCart-icon -->
+        </div>
+    </div>
+  </nav>
+  <div class="fixed-nav" id="fixedNav">
+    <input class="refresh-button" type="button" value="Mindfulness" onClick="refresh">
+  </div>
+  <!-- overlay Effect -->
+  <div id="overlay">
+    
+  </div>
+  <!-- login-user -->
+  <div id="loginPageId" class="modal">
+    <!-- form-start -->
+    <form class="modal-content animate">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('loginPageId').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="/images/img_avatar2.png" alt="Avatar" class="avatar"> <!-- user-img -->
+      </div>
+  
+      <div class="hidden-container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+        <label for="psw"><b>Password</b></label><!-- Password-input -->
+        <input type="password" placeholder="Enter Password" name="psw" required>
+        
+        <button type="submit" class="loginbtn">Login</button><!-- login-button -->
+        <label><input type="checkbox" checked="checked" name="remember"> Remember me</label> 
+      </div>
+      <!-- cancel-button and ForgotPassword -->
+      <div class="container-bottom" style="background-color: #000000">
+        <button type="button" onclick="document.getElementById('loginPageId').style.display='none' " class="cancelbtn">Cancel</button>
+        <span class="psw"><a href="#">Forgot password?</a></span>
+      </div>
+      
+    </form>
+    <!-- form-end -->
+  </div>
+  <!-- shopping-cart -->
+  <div class="cart-popup" id="myCart">
+    <form class="innerCart-container">
+      <h3>Your Cart</h3>
+      <span onclick="document.getElementById('myCart').style.display='none'" class="closeCart" title="Close Cart">&times;</span>
+
+      <label for="msg"><b>Lab Test</b></label><hr>
+      <img src="/Pikadex/images/empty-cart-dark-theme.webp">
+  
+      <button type="button" class="booktestBtn">BOOK TEST ON CULTFIT</button>
+    </form>
+  </div>
+
+
+<!-- mainbody -->
+  <main class="main-container">
+    <h2>Mindfulness Library</h2>
+    <h6 style="font-weight: 100;">Access our pre-recorded meditation sessions, at your convenience</h6>
+    
+    <div class="container">
+      <!-- only working card of cult.fit -->
+      <div class="card" id="myLink">
+        <img src="/Pikadex/images/oneRap.jpeg" alt="Image" class="card-img">
+        <div class="card-content">
+          <h3 class="card-title" style="font-weight: bold;">One Rep at a time</h3>
+          <p class="card-text">Join podcast host, Deepak Gopalakrishnan aka Chuck, in his quest to build a fitness habit
+            for life. Tune in every weekday for invigorating discussions on curated health & fitness topics, including
+            interviews with fitness!</p>
+          <div class="card-footer">
+            <button class="btn">
+              <i class="fa-regular fa-heart fa-2xl" style="color: #000000;"></i>
+            </button>
+            <button class="btn">
+              <i class="fa-regular fa-comment fa-flip-horizontal fa-2xl" style="color: #000000;"></i>
+            </button>
+            <div class="comment-section hidden">
+              <form>
+                <textarea placeholder="Write your comment here....."></textarea>
+                <button type="submit">SUBMIT</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/Pikadex/images/covidRecovery.png" alt="Image" class="card-img">
+        <div class="card-content">
+          <h3 class="card-title" style="font-weight: bold;">Covid Recovery</h3>
+          <p class="card-text">It’s time to say goodbye to the physical and mental stress brought upon by this virus.
+            This program focuses on bringing stability back into the body through gentle stretches and a sense of peace
+            into the mind through deep meditation.</p>
+          <div class="card-footer">
+            <button class="btn" id="likebtn">
+              <i class="fa-regular fa-heart fa-2xl" id="likeicon" style="color: #000000;"></i>
+            </button>
+            <button class="btn" id="comment-button">
+              <i class="fa-regular fa-comment fa-flip-horizontal fa-2xl" style="color: #000000;"></i>
+            </button>
+            <div class="comment-section hidden" id="commentSection">
+              <form>
+                <textarea class="comment-input" placeholder="Write your comment here....."></textarea>
+                <button type="submit">SUBMIT</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>  <!-- 1 -->
+    <div class="container">
+      <div class="card">
+        <img src="/Pikadex/images/SandeepStrength.webp" alt="Image" class="card-img">
+        <div class="card-content">
+          <h3 class="card-title" style="font-weight: bold;">Running Programs</h3>
+          <p class="card-text">Join Juliet for this Run series. This is a combination of 3 different styles of running
+            making it fun. Walk this way: A walking workout to clear the mind and rev up the body. </p>
+          <div class="card-footer">
+            <button class="btn" id="likebtn">
+              <i class="fa-regular fa-heart fa-2xl" id="likeicon" style="color: #000000;"></i>
+            </button>
+            <i class="fa-regular fa-comment fa-flip-horizontal fa-2xl" style="color: #000000;"></i>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/Pikadex/images/5minuteMeditation.png" alt="Image" class="card-img">
+        <div class="card-content">
+          <h3 class="card-title" style="font-weight: bold;">5 Minute Meditations</h3>
+          <p class="card-text">Panic? Anxiety? We have you all covered with these short 5 minute meditations. Dive in!
+          </p>
+          <div class="card-footer">
+            <button class="btn" id="likebtn">
+              <i class="fa-regular fa-heart fa-2xl" id="likeicon" style="color: #000000;"></i>
+            </button>
+            <button class="btn" id="comment-button">
+              <i class="fa-regular fa-comment fa-flip-horizontal fa-2xl" style="color: #000000;"></i>
+            </button>
+            <div class="comment-section hidden" id="commentSection">
+              <form>
+                <textarea class="comment-input" placeholder="Write your comment here....."></textarea>
+                <button type="submit">SUBMIT</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- 2 -->
+    <div class="container">
+      <div class="card">
+        <img src="/Pikadex/images/meditation-foundation.webp" alt="Image" class="card-img">
+        <div class="card-content">
+          <h3 class="card-title" style="font-weight: bold;">Meditation - Foundation</h3>
+          <p class="card-text">Get started with meditation! This series will guide you through the basic skills of
+            meditation and help you explore mindfulness.</p>
+            <div class="card-footer">
+              <button class="btn" id="likebtn">
+                <i class="fa-regular fa-heart fa-2xl" id="likeicon" style="color: #000000;"></i>
+              </button>
+              <button class="btn" id="comment-button">
+                <i class="fa-regular fa-comment fa-flip-horizontal fa-2xl" style="color: #000000;"></i>
+              </button>
+              <div class="comment-section hidden" id="commentSection">
+                <form>
+                  <textarea class="comment-input" placeholder="Write your comment here....."></textarea>
+                  <button type="submit">SUBMIT</button>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/Pikadex/images/Sleep Stories.webp" alt="Image" class="card-img">
+        <div class="card-content">
+          <h3 class="card-title" style="font-weight: bold;">Sleep Stories</h3>
+          <p class="card-text">Say goodbye to sleepless nights! Created by Dr.Shyam Bhat, these stories will help you
+            relax to drift into a peaceful and deep sleep.</p>
+            <div class="card-footer">
+              <button class="btn" id="likebtn">
+                <i class="fa-regular fa-heart fa-2xl" id="likeicon" style="color: #000000;"></i>
+              </button>
+              <button class="btn" id="comment-button">
+                <i class="fa-regular fa-comment fa-flip-horizontal fa-2xl" style="color: #000000;"></i>
+              </button>
+              <div class="comment-section hidden" id="commentSection">
+                <form>
+                  <textarea class="comment-input" placeholder="Write your comment here....."></textarea>
+                  <button type="submit">SUBMIT</button>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div> <!-- 3 -->
+    <div class="container">
+      <div class="card">
+        <img src="/Pikadex/images/Yoga- Pranayama.webp" alt="Image" class="card-img">
+        <div class="card-content">
+          <h3 class="card-title" style="font-weight: bold;">Yoga- Pranayama</h3>
+          <p class="card-text">This Pranayama series contains breath practices which have the potential to effect the
+            gross body.</p>
+            <div class="card-footer">
+              <button class="btn" id="likebtn">
+                <i class="fa-regular fa-heart fa-2xl" id="likeicon" style="color: #000000;"></i>
+              </button>
+              <button class="btn" id="comment-button">
+                <i class="fa-regular fa-comment fa-flip-horizontal fa-2xl" style="color: #000000;"></i>
+              </button>
+              <div class="comment-section hidden" id="commentSection">
+                <form>
+                  <textarea class="comment-input" placeholder="Write your comment here....."></textarea>
+                  <button type="submit">SUBMIT</button>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/Pikadex/images/Focus Meditation.webp" alt="Image" class="card-img">
+        <div class="card-content">
+          <h3 class="card-title" style="font-weight: bold;">Focus Meditation</h3>
+          <p class="card-text">It's the present that matters! Created by Dr.Shyam Bhat, this meditation series will help
+            you bring your attention to the present moment by improving focus and concentration.</p>
+            <div class="card-footer">
+              <button class="btn" id="likebtn">
+                <i class="fa-regular fa-heart fa-2xl" id="likeicon" style="color: #000000;"></i>
+              </button>
+              <button class="btn" id="comment-button">
+                <i class="fa-regular fa-comment fa-flip-horizontal fa-2xl" style="color: #000000;"></i>
+              </button>
+              <div class="comment-section hidden" id="commentSection">
+                <form>
+                  <textarea class="comment-input" placeholder="Write your comment here....."></textarea>
+                  <button type="submit">SUBMIT</button>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div> <!-- 4 -->
+    <div class="container">
+      <div class="card">
+        <img src="/Pikadex/images/streesReduction.webp" alt="Image" class="card-img">
+        <div class="card-content">
+          <h3 class="card-title" style="font-weight: bold;">Stress Reduction Meditation</h3>
+          <p class="card-text">Say no to stress with this series! The various packs created by Dr. Shyam Bhat will help
+            you manage stressful thoughts and feel more relaxed.</p>
+            <div class="card-footer">
+              <button class="btn" id="likebtn">
+                <i class="fa-regular fa-heart fa-2xl" id="likeicon" style="color: #000000;"></i>
+              </button>
+              <button class="btn" id="comment-button">
+                <i class="fa-regular fa-comment fa-flip-horizontal fa-2xl" style="color: #000000;"></i>
+              </button>
+              <div class="comment-section hidden" id="commentSection">
+                <form>
+                  <textarea class="comment-input" placeholder="Write your comment here....."></textarea>
+                  <button type="submit">SUBMIT</button>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/Pikadex/images/BeattheStressProgram.webp" alt="Image" class="card-img">
+        <div class="card-content">
+          <h3 class="card-title" style="font-weight: bold;">Beat the Stress Program</h3>
+          <p class="card-text">Say no to stress with this series! The various packs will help you manage stressful
+            thoughts and feel more relaxed.</p>
+            <div class="card-footer">
+              <button class="btn" id="likebtn">
+                <i class="fa-regular fa-heart fa-2xl" id="likeicon" style="color: #000000;"></i>
+              </button>
+              <button class="btn" id="comment-button">
+                <i class="fa-regular fa-comment fa-flip-horizontal fa-2xl" style="color: #000000;"></i>
+              </button>
+              <div class="comment-section hidden" id="commentSection">
+                <form>
+                  <textarea class="comment-input" placeholder="Write your comment here....."></textarea>
+                  <button type="submit">SUBMIT</button>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div> <!-- 5 -->
+    <div class="container">
+      <div class="card">
+        <img src="/Pikadex/images/Pranayama.jpeg" alt="Image" class="card-img">
+        <div class="card-content">
+          <h3 class="card-title" style="font-weight: bold;">30min Pranayama</h3>
+          <p class="card-text">This will be a half an hour audio-led Pranayama class by Divya Rolla. Breath is life.
+            Most people breathe using a small portion of their lung capacity.</p>
+            <div class="card-footer">
+              <button class="btn" id="likebtn">
+                <i class="fa-regular fa-heart fa-2xl" id="likeicon" style="color: #000000;"></i>
+              </button>
+              <button class="btn" id="comment-button">
+                <i class="fa-regular fa-comment fa-flip-horizontal fa-2xl" style="color: #000000;"></i>
+              </button>
+              <div class="comment-section hidden" id="commentSection">
+                <form>
+                  <textarea class="comment-input" placeholder="Write your comment here....."></textarea>
+                  <button type="submit">SUBMIT</button>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/Pikadex/images/YogaNidra.jpeg" alt="Image" class="card-img">
+        <div class="card-content">
+          <h3 class="card-title" style="font-weight: bold;">30min Yoga Nidra</h3>
+          <p class="card-text">This will be a half an hour audio-led Yoga NIdra class by Divya Rolla. Yoga Nidra is a
+            powerful practise which has a profound effect on your body and mind.</p>
+          <div class="card-footer">
+            <button class="btn" id="likebtn">
+              <i class="fa-regular fa-heart fa-2xl" id="likeicon" style="color: #000000;"></i>
+            </button>
+            <i class="fa-regular fa-comment fa-flip-horizontal fa-2xl" style="color: #000000;"></i>
+          </div>
+        </div>
+      </div>
+    </div> <!-- 6 -->
+    <div class="container">
+      <div class="card">
+        <img src="/Pikadex/images/RelaxationStressRelief.webp" alt="Image" class="card-img">
+        <div class="card-content">
+          <h3 class="card-title" style="font-weight: bold;">Yoga for Relaxation and Stress Relief</h3>
+          <p class="card-text">A series which will guide you through asana, pranayama and savasana addressing the body,
+            mind and breath</p>
+            <div class="card-footer">
+              <button class="btn" id="likebtn">
+                <i class="fa-regular fa-heart fa-2xl" id="likeicon" style="color: #000000;"></i>
+              </button>
+              <button class="btn" id="comment-button">
+                <i class="fa-regular fa-comment fa-flip-horizontal fa-2xl" style="color: #000000;"></i>
+              </button>
+              <div class="comment-section hidden" id="commentSection">
+                <form>
+                  <textarea class="comment-input" placeholder="Write your comment here....."></textarea>
+                  <button type="submit">SUBMIT</button>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/Pikadex/images/difficultEmotion.webp" alt="Image" class="card-img">
+        <div class="card-content">
+          <h3 class="card-title" style="font-weight: bold;">Difficult Emotions</h3>
+          <p class="card-text">This pack by Prasiddha Ramarao addresses the fact that strong emotions do not have to be
+            scary. Emotions often tell us that we need to take care of ourselves, so denying or suppressing them harms
+            rather than helps us.</p>
+            <div class="card-footer">
+              <button class="btn" id="likebtn">
+                <i class="fa-regular fa-heart fa-2xl" id="likeicon" style="color: #000000;"></i>
+              </button>
+              <button class="btn" id="comment-button">
+                <i class="fa-regular fa-comment fa-flip-horizontal fa-2xl" style="color: #000000;"></i>
+              </button>
+              <div class="comment-section hidden" id="commentSection">
+                <form>
+                  <textarea class="comment-input" placeholder="Write your comment here....."></textarea>
+                  <button type="submit">SUBMIT</button>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div> <!-- 7 -->
+    <div class="container">
+      <div class="card">
+        <img src="/Pikadex/images/MeditationKids.webp" alt="Image" class="card-img">
+        <div class="card-content">
+          <h3 class="card-title" style="font-weight: bold;">Meditation for Kids</h3>
+          <p class="card-text">This series led by Prasiddha Ramarao would serve as a wonderful start for your child's
+            meditation journey. The language is simple and engaging and something that would captures a child's
+            imagination</p>
+            <div class="card-footer">
+              <button class="btn" id="likebtn">
+                <i class="fa-regular fa-heart fa-2xl" id="likeicon" style="color: #000000;"></i>
+              </button>
+              <button class="btn" id="comment-button">
+                <i class="fa-regular fa-comment fa-flip-horizontal fa-2xl" style="color: #000000;"></i>
+              </button>
+              <div class="comment-section hidden" id="commentSection">
+                <form>
+                  <textarea class="comment-input" placeholder="Write your comment here....."></textarea>
+                  <button type="submit">SUBMIT</button>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/Pikadex/images/relationshipHandling.jpeg" alt="Image" class="card-img">
+        <div class="card-content">
+          <h3 class="card-title" style="font-weight: bold;">Relationship Healing</h3>
+          <p class="card-text">This meditation pack on Relationships created by Spiritual Coach ModMonk Anshul will take
+            you on a journey of bonding with yourself and will help in building a bridge of love,and acceptance with
+            everyone around you.</p>
+            <div class="card-footer">
+              <button class="btn" id="likebtn">
+                <i class="fa-regular fa-heart fa-2xl" id="likeicon" style="color: #000000;"></i>
+              </button>
+              <button class="btn" id="comment-button">
+                <i class="fa-regular fa-comment fa-flip-horizontal fa-2xl" style="color: #000000;"></i>
+              </button>
+              <div class="comment-section hidden" id="commentSection">
+                <form>
+                  <textarea class="comment-input" placeholder="Write your comment here....."></textarea>
+                  <button type="submit">SUBMIT</button>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div> <!-- 8 -->
+    <div class="container">
+      <div class="card">
+        <img src="/Pikadex/images/oneRap.jpeg" alt="Image" class="card-img">
+        <div class="card-content">
+          <h3 class="card-title" style="font-weight: bold;">One Rep at a time</h3>
+          <p class="card-text">Join podcast host, Deepak Gopalakrishnan aka Chuck, in his quest to build a fitness habit
+            for life. Tune in every weekday for invigorating discussions on curated health & fitness topics, including
+            interviews with fitness!</p>
+            <div class="card-footer">
+              <button class="btn" id="likebtn">
+                <i class="fa-regular fa-heart fa-2xl" id="likeicon" style="color: #000000;"></i>
+              </button>
+              <button class="btn" id="comment-button">
+                <i class="fa-regular fa-comment fa-flip-horizontal fa-2xl" style="color: #000000;"></i>
+              </button>
+              <div class="comment-section hidden" id="commentSection">
+                <form>
+                  <textarea class="comment-input" placeholder="Write your comment here....."></textarea>
+                  <button type="submit">SUBMIT</button>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/Pikadex/images/5minuteMeditation.png" alt="Image" class="card-img">
+        <div class="card-content">
+          <h3 class="card-title" style="font-weight: bold;">5 Minute Meditations</h3>
+          <p class="card-text">Panic? Anxiety? We have you all covered with these short 5 minute meditations. Dive in!
+          </p>
+          <div class="card-footer">
+            <button class="btn" id="likebtn">
+              <i class="fa-regular fa-heart fa-2xl" id="likeicon" style="color: #000000;"></i>
+            </button>
+            <button class="btn" id="comment-button">
+              <i class="fa-regular fa-comment fa-flip-horizontal fa-2xl" style="color: #000000;"></i>
+            </button>
+            <div class="comment-section hidden" id="commentSection">
+              <form>
+                <textarea class="comment-input" placeholder="Write your comment here....."></textarea>
+                <button type="submit">SUBMIT</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- 9 -->
+    <div class="container">
+      <div class="card">
+        <img src="/Pikadex/images/meditation-foundation.webp" alt="Image" class="card-img">
+        <div class="card-content">
+          <h3 class="card-title" style="font-weight: bold;">Meditation - Foundation</h3>
+          <p class="card-text">Get started with meditation! This series will guide you through the basic skills of
+            meditation and help you explore mindfulness.</p>
+            <div class="card-footer">
+              <button class="btn" id="likebtn">
+                <i class="fa-regular fa-heart fa-2xl" id="likeicon" style="color: #000000;"></i>
+              </button>
+              <button class="btn" id="comment-button">
+                <i class="fa-regular fa-comment fa-flip-horizontal fa-2xl" style="color: #000000;"></i>
+              </button>
+              <div class="comment-section hidden" id="commentSection">
+                <form>
+                  <textarea class="comment-input" placeholder="Write your comment here....."></textarea>
+                  <button type="submit">SUBMIT</button>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/Pikadex/images/BeattheStressProgram.webp" alt="Image" class="card-img">
+        <div class="card-content">
+          <h3 class="card-title" style="font-weight: bold;">Beat the Stress Program</h3>
+          <p class="card-text">Say no to stress with this series! The various packs will help you manage stressful
+            thoughts and feel more relaxed.</p>
+            <div class="card-footer">
+              <button class="btn" id="likebtn">
+                <i class="fa-regular fa-heart fa-2xl" id="likeicon" style="color: #000000;"></i>
+              </button>
+              <button class="btn" id="comment-button">
+                <i class="fa-regular fa-comment fa-flip-horizontal fa-2xl" style="color: #000000;"></i>
+              </button>
+              <div class="comment-section hidden" id="commentSection">
+                <form>
+                  <textarea class="comment-input" placeholder="Write your comment here....."></textarea>
+                  <button type="submit">SUBMIT</button>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div> <!-- 10 -->
+    <div class="container">
+      <div class="card">
+        <img src="/Pikadex/images/SandeepStrength.webp" alt="Image" class="card-img">
+        <div class="card-content">
+          <h3 class="card-title" style="font-weight: bold;">Running Programs</h3>
+          <p class="card-text">Join Juliet for this Run series. This is a combination of 3 different styles of running
+            making it fun. Walk this way: A walking workout to clear the mind and rev up the body. </p>
+            <div class="card-footer">
+              <button class="btn" id="likebtn">
+                <i class="fa-regular fa-heart fa-2xl" id="likeicon" style="color: #000000;"></i>
+              </button>
+              <button class="btn" id="comment-button">
+                <i class="fa-regular fa-comment fa-flip-horizontal fa-2xl" style="color: #000000;"></i>
+              </button>
+              <div class="comment-section hidden" id="commentSection">
+                <form>
+                  <textarea class="comment-input" placeholder="Write your comment here....."></textarea>
+                  <button type="submit">SUBMIT</button>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/Pikadex/images/Sleep Stories.webp" alt="Image" class="card-img">
+        <div class="card-content">
+          <h3 class="card-title" style="font-weight: bold;">Sleep Stories</h3>
+          <p class="card-text">Say goodbye to sleepless nights! Created by Dr.Shyam Bhat, these stories will help you
+            relax to drift into a peaceful and deep sleep.</p>
+            <div class="card-footer">
+              <button class="btn" id="likebtn">
+                <i class="fa-regular fa-heart fa-2xl" id="likeicon" style="color: #000000;"></i>
+              </button>
+              <button class="btn" id="comment-button">
+                <i class="fa-regular fa-comment fa-flip-horizontal fa-2xl" style="color: #000000;"></i>
+              </button>
+              <div class="comment-section hidden" id="commentSection">
+                <form>
+                  <textarea class="comment-input" placeholder="Write your comment here....."></textarea>
+                  <button type="submit">SUBMIT</button>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div> <!-- 11 -->
+  </main>
+  
+<!-- Footer for cult.fit -->
+  <footer class="footer-container">
+    <div class="cultfit-moto">
+      <img src="/Pikadex/images/6232e62a0e8d6a31026cf534_cultfit logo.png" width="100px">
+      <p class="moto">At cult.fit, we make group workouts fun, daily food healthy & tasty, mental fitness easy with yoga
+        & meditation, Medical & lifestyle care hassle-free.#BeBetterEveryDay</p>
+    </div>
+    <div class="childcompanys-link">
+      <a href="#">cult.fit for business</a>
+      <a href="#">cult.fit franchise</a>
+      <a href="#">corporate partnerships</a>
+      <a href="#">cult pass network</a>
+      <a href="#">t&c for business</a>
+    </div>
+    <div class="blogAndStuff">
+      <a href="#">partner.fit</a>
+      <a href="#">blogs</a>
+      <a href="#">security</a>
+      <a href="#">careers</a>
+    </div>
+    <div class="contacts">
+      <a href="#">contact us</a>
+      <a href="#">privacy policy</a>
+      <a href="#">cult bmi calculator</a>
+      <a href="#">terms & conditions</a>
+    </div>
+    <div class="socialHandles">
+      <a href="https://www.youtube.com/channel/UCSE72IaHOL-1Tv-m3JHE4Cg"><img src="/Pikadex/images/youtube-icon.webp"
+          alt="youTube-icon" width="200px"></a><br>
+      <img src="/Pikadex/images/facebook-icon.png" alt="facebook-icon" width="50px">
+      <img src="/Pikadex/images/instagram.png" alt="instagram" width="50px">
+      <img src="/Pikadex/images/twitter.png" alt="twitter" width="50px">
+      <img src="/Pikadex/images/linkedin-icon.png" alt="linkedin-icon" width="50px">
+    </div>
+  </footer>
+
+
+  <script src="https://kit.fontawesome.com/a1da3dbfbf.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+

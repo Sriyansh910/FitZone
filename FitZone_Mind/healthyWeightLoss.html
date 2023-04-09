@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>oneRap | healthyWeightLoss</title>
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="healthyWeightLossStyle.css">
+</head>
+
+<body>
+  <!-- Navebas - with brandlogo -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #000000;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/Pikadex/index.html"><img src="/Pikadex/images/Group-13153.svg" alt="1"
+          width="50">cult.fit</a>
+      <div class="collapse navbar-collapse" id="navbarText" style="font-size: small;">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">FITNESS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">CARE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/Pikadex/index.html">MIND</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">STORE</a>
+          </li>
+        </ul>
+      </div>
+      <div class="lastpart">
+        <div class="avatar" id="login-user">
+          <i class="fa-regular fa-user fa-xl"></i>  <!-- user-icon -->
+        </div>
+        <div class="cart" id="cartIcon-btn" onclick="openForm()">
+          <i class="fa-solid fa-cart-shopping fa-2xl"></i>  <!-- soppingCart-icon -->
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- login-user -->
+  <div id="loginPageId" class="modal">
+    <!-- form-start -->
+    <form class="modal-content animate">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('loginPageId').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="/images/img_avatar2.png" alt="Avatar" class="avatar"> <!-- user-img -->
+      </div>
+  
+      <div class="hidden-container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+        <label for="psw"><b>Password</b></label><!-- Password-input -->
+        <input type="password" placeholder="Enter Password" name="psw" required>
+        
+        <button type="submit" class="loginbtn">Login</button><!-- login-button -->
+        <label><input type="checkbox" checked="checked" name="remember"> Remember me</label> 
+      </div>
+      <!-- cancel-button and ForgotPassword -->
+      <div class="container-bottom" style="background-color: #000000">
+        <button type="button" onclick="document.getElementById('loginPageId').style.display='none' " class="cancelbtn">Cancel</button>
+        <span class="psw"><a href="#">Forgot password?</a></span>
+      </div>
+      
+    </form>
+    <!-- form-end -->
+  </div>
+  <!-- shopping-cart -->
+  <div class="cart-popup" id="myCart">
+    <form class="innerCart-container">
+      <h3>Your Cart</h3>
+      <span onclick="document.getElementById('myCart').style.display='none'" class="closeCart" title="Close Cart">&times;</span>
+  
+      <label for="msg"><b>Lab Test</b></label><hr>
+      <img src="/Pikadex/images/empty-cart-dark-theme.webp">
+      <div class="emptyCartText" id="emptyCartMsg">
+        <p style="font-weight: 600;">Your cart is empty</p>
+        <small>Looks like you haven't made any purchases yet</small>
+      </div>
+      <button type="button" class="booktestBtn">BOOK TEST ON CULTFIT</button>
+    </form>
+  </div>
+
+  <main class="main-container">
+    <!-- left-container -->
+    <div class="left-container">
+      <img src="/Pikadex/images/oneRap-healthyweightloss.png" alt="oneRap-healthyweightloss" class="poster-img">
+      <img src="/Pikadex/images/sapiens_male.png" alt="character" class="character-img">
+    </div>
+
+    <!-- right-container -->
+    <div class="right-container">
+      <!-- Home > Live > Mindfulness > One Rep at a time >Healthy Weight Loss-->
+      <div class="link-back"><a href="#">Home ><a href="#"> Live ><a href="/Pikadex/index.html"> Mindfulness ><a href="/Pikadex/oneRep.html"> One Rep at a
+                time ><a href="/Pikadex/healthyWeightLoss.html" style="font-weight: bold;"> Healthy Weight Loss </a></a></a></a></a></div>
+      <h2>Healthy Weight Loss</h2>
+      <small>06 sessions</small>
+      <hr>
+      <h4>Sessions in this pack</h4>
+      <div class="card">
+        <div class="img-container">
+          <img src="/Pikadex/images/oneRap-healthyweightloss.png" alt="Image" class="card-img">
+          <div>
+            <a href="#" class="icon">
+              <i class="fa-solid fa-circle-play" id="playBtn" style="color: #f20202;" onclick="myFunction()"></i>
+            </a>
+          </div>
+        </div>
+        <div class="card-content">
+          <h5 class="card-title" style="font-weight: bold;">Introduction</h5>
+          <small class="countSection" style="font-weight: 100;">05 minutes</small>
+        </div>
+      </div> <!-- 1 -->
+      <div class="card">
+        <div class="img-container">
+          <img src="/Pikadex/images/OR-HWL-realisticweight.avif" alt="Image" class="card-img">
+          <div>
+            <a href="#" class="icon">
+              <i class="fa-solid fa-circle-play" style="color: #f20202;" onclick="myFunction()"></i>
+            </a>
+          </div>
+        </div>
+        <div class="card-content">
+          <h5 class="card-title" style="font-weight: bold;">Realistic weight loss goal</h5>
+          <small class="countSection" style="font-weight: 100;">07 minutes</small>
+        </div>
+      </div> <!-- 2 -->
+      <div class="card">
+        <div class="img-container">
+          <img src="/Pikadex/images/OR-HWL-summerLoss.jpeg" alt="Image" class="card-img">
+          <div>
+            <a href="#" class="icon">
+              <i class="fa-solid fa-circle-play" style="color: #f20202;" onclick="myFunction()"></i>
+            </a>
+          </div>
+        </div>
+        <div class="card-content">
+          <h5 class="card-title" style="font-weight: bold;">Weight Loss in Summer</h5>
+          <small class="countSection" style="font-weight: 100;">07 minutes</small>
+        </div>
+      </div> <!-- 3 -->
+      <div class="card">
+        <div class="img-container">
+          <img src="/Pikadex/images/OR-HWL_calories-counting.jpeg" alt="Image" class="card-img">
+          <div>
+            <a href="#" class="icon">
+              <i class="fa-solid fa-circle-play" style="color: #f20202;" onclick="myFunction()"></i>
+            </a>
+          </div>
+        </div>
+        <div class="card-content">
+          <h5 class="card-title" style="font-weight: bold;">Calorie Counting : Pros & Cons</h5>
+          <small class="countSection" style="font-weight: 100;">07 minutes</small>
+        </div>
+      </div> <!-- 4 -->
+      <div class="card">
+        <div class="img-container">
+          <img src="/Pikadex/images/OR-HWL-meta.cms" alt="Image" class="card-img">
+          <div>
+            <a href="#" class="icon">
+              <i class="fa-solid fa-circle-play" style="color: #f20202;" onclick="myFunction()"></i>
+            </a>
+          </div>
+        </div>
+        <div class="card-content">
+          <h5 class="card-title" style="font-weight: bold;">Metabolism & Weight Loss</h5>
+          <small class="countSection" style="font-weight: 100;">07 minutes</small>
+        </div>
+      </div> <!-- 5 -->
+      <div class="card">
+        <div class="img-container">
+          <img src="/Pikadex/images/OR-HWL-cardio.webp" alt="Image" class="card-img">
+          <div>
+            <a href="#" class="icon">
+              <i class="fa-solid fa-circle-play" style="color: #f20202;" onclick="myFunction()"></i>
+            </a>
+          </div>
+        </div>
+        <div class="card-content">
+          <h5 class="card-title" style="font-weight: bold;">Rishabh on strength vs Cardio</h5>
+          <small class="countSection" style="font-weight: 100;">40 minutes</small>
+        </div>
+      </div> <!-- 6 -->
+      <hr>
+      <h4>About this pack</h4>
+      <p>Join podcast host, Deepak Gopalakrishnan aka Chuck, in his quest to build a fitness habit
+        for life. Tune in every weekday for invigorating discussions on curated health & fitness
+        topics, including interviews with fitness & nutrition experts, sleep scientists, even
+        former Olympians! </p>
+    </div>
+  </main>
+  <div id="snackbar">Login to enjoy fitness Video</div>
+  <!-- Footer for cult.fit -->
+  <footer class="footer-container">
+    <div class="cultfit-moto">
+      <img src="/Pikadex/images/6232e62a0e8d6a31026cf534_cultfit logo.png" width="100px">
+      <p class="moto">At cult.fit, we make group workouts fun, daily food healthy & tasty, mental fitness easy with yoga
+        & meditation, Medical & lifestyle care hassle-free.#BeBetterEveryDay</p>
+    </div>
+    <div class="childcompanys-link">
+      <a href="#">cult.fit for business</a>
+      <a href="#">cult.fit franchise</a>
+      <a href="#">corporate partnerships</a>
+      <a href="#">cult pass network</a>
+      <a href="#">t&c for business</a>
+    </div>
+    <div class="blogAndStuff">
+      <a href="#">partner.fit</a>
+      <a href="#">blogs</a>
+      <a href="#">security</a>
+      <a href="#">careers</a>
+    </div>
+    <div class="contacts">
+      <a href="#">contact us</a>
+      <a href="#">privacy policy</a>
+      <a href="#">cult bmi calculator</a>
+      <a href="#">terms & conditions</a>
+    </div>
+    <div class="socialHandles">
+      <a href="https://www.youtube.com/channel/UCSE72IaHOL-1Tv-m3JHE4Cg"><img src="/Pikadex/images/youtube-icon.webp"
+          alt="youTube-icon" width="200px"></a><br>
+      <img src="/Pikadex/images/facebook-icon.png" alt="facebook-icon" width="50px">
+      <img src="/Pikadex/images/instagram.png" alt="instagram" width="50px">
+      <img src="/Pikadex/images/twitter.png" alt="twitter" width="50px">
+      <img src="/Pikadex/images/linkedin-icon.png" alt="linkedin-icon" width="50px">
+    </div>
+  </footer>
+  <!-- script for healthyWeightLoss -->
+  <script src="healthyWeightLossScript.js"></script>
+  <!-- script for icon -->
+  <script src="https://kit.fontawesome.com/a1da3dbfbf.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
