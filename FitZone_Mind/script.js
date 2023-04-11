@@ -32,12 +32,15 @@ const myCart = document.getElementById('myCart');
 cartfun.addEventListener('click',() => {
     myCart.style.display = "block";
 });
-
+function scrollFuntionCart() {
+    if(myCart.style.display == 'block')
+        myCart.style.top = "10px";
+}
 //link oneRapAtTime page with mind page of cult.fit webside
 const myLink = document.querySelector('#myLink');
 
 myLink.addEventListener('click',() => {
-    window.location.href = 'http://127.0.0.1:5500/Pikadex/oneRep.html';
+    window.location.href = 'http://127.0.0.1:5500/FitZone/FitZone_Mind/oneRep.html';
 });
 
 //Like button on second card

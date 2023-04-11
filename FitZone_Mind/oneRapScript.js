@@ -1,7 +1,7 @@
 //link healthyWeightLoss page with oneRap page of cult.fit webside
 const myLink = document.querySelector('#myLink');
 myLink.addEventListener('click', () => {
-    window.location.href = 'http://127.0.0.1:5500/Pikadex/healthyWeightLoss.html';
+    window.location.href = 'http://127.0.0.1:5500/FitZone/FitZone_Mind/healthyWeightLoss.html';
 });
 
 //login-user 
