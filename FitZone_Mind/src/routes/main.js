@@ -7,6 +7,9 @@ const routes = express.Router();
 routes.get("/mind", (request,response) => {
     response.render("index");
 })
+routes.get("/signup", (request,response) => {
+    response.render("signupPage");
+})
 
 routes.get('/mind/oneRep' , (request,response)=>{
     response.render("oneRep");
