@@ -13,7 +13,7 @@
           <p>Please fill in this form to create an account.</p>
           <hr>
       
-          <label ><b>Name</b></label>
+          <label ><b>Email</b></label>
           <input type="text">
       
           <label ><b>Password</b></label>
@@ -42,11 +42,11 @@
           
            e.preventDefault();
 
-          let name=document.querySelector("input[type='text']").value;
+          let email=document.querySelector("input[type='text']").value;
           let password=document.querySelector("input[type='password']").value;
          // let checkbox=document.querySelector("input[type='checkbox']");
 
-         let resp=await axios.post('/auth/signup',{name,password});
+         let resp=await axios.post('/auth/signup',{email,password});
          console.log('resp',resp);
         })
       </script>
