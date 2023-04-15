@@ -27,7 +27,7 @@ nav {
     padding: 0px 30px;
 }
 .location {
-    display: flex;
+    display: none;
     flex-direction: row;
     text-align: center;
     padding: 10px;

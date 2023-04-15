@@ -40,7 +40,7 @@ function scrollFuntionCart() {
 const myLink = document.querySelector('#myLink');
 
 myLink.addEventListener('click',() => {
-    window.location.href = 'http://127.0.0.1:5500/FitZone/FitZone_Mind/oneRep.html';
+    window.location.href = 'http://localhost:2500/mind/oneRep';
 });
 
 //Like button on second card
