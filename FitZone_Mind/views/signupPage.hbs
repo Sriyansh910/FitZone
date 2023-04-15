@@ -23,29 +23,29 @@
 <body>
     <header>
         <h1><img src="/static/image/Group-13153.svg" alt="On" width="50"><b>FitZone</b></h1>
-        <p><b>Sign up to make your body Fit....</b></p>
+        <p><b>Sign up to make your body Fit.....</b></p>
     </header>
     <div class="container">
-        <form action="">
+        <form action="/signup" method="post">
             <p>
                 <b>What's your Email_ID :</b><br>
-                <input type="email" name="email" id="email" placeholder="Email_ID" required>
+                <input type="email" id="email" placeholder="Email_ID" name="email" required>
             </p>
             <p>
                 <b>Create a Password :</b><br>
-                <input type="password" name="email" id="password" placeholder="Password" required>
+                <input type="password" id="password" placeholder="Password" name="password" required>
             </p>
             <p>
                 <b>Enter your Full_Name :</b> <br>
-                <input type="text" placeholder="Harshvardhan Singh" required>
+                <input type="text" placeholder="Harshvardhan Singh" name="fullName" required>
             </p>
             <p>
                 <b>Phone Number</b><br>
-                <input type="number" placeholder="Phone Number" required>
+                <input type="number" placeholder="Phone Number" name="phoneNumber" required>
             </p>
             <p>
                 <b>What's your date of birth?</b><br>
-                <input type="date" required>
+                <input type="date" name="dob" required>
             </p>
             <p>
                 <b>Gender</b><br>
@@ -53,7 +53,8 @@
                 <input type="radio" name="gender" id="Male"> Male
                 <input type="radio" name="gender" id="Female"> Female
                 <input type="radio" name="gender" id="Non-binary"> Non-binary<br>
-                <input type="radio" name="gender" id="Other"> Other <input type="radio" name="gender" id="private"> Prefer not to say
+                <input type="radio" name="gender" id="Other"> Other 
+                <input type="radio" name="gender" id="private"> Prefer not to say
                 </fieldset>
             </p>
 

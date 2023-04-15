@@ -31,19 +31,19 @@
   <!-- login-user -->
   <div id="loginPageId" class="modal">
     <!-- form-start -->
-    <form class="modal-content animate">
+    <form class="modal-content animate" action="/mind" method="post">
       <div class="imgcontainer">
         <span onclick="document.getElementById('loginPageId').style.display='none'" class="close" title="Close Modal">&times;</span>
-        <img src="/static/images/img_avatar.png" alt=" " class="avatar"> <!-- user-img -->
+        <img src="/static/image/img_avatar.png" alt=" " class="avatar"> <!-- user-img -->
       </div>
   
       <div class="hidden-container">
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
-        <label for="psw"><b>Password</b></label><!-- Password-input -->
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <label for="user_email"><b>Email_ID</b></label>
+        <input type="email" placeholder="Enter Your Email_ID" name="email" required>
+        <label for="user_password"><b>Password</b></label><!-- Password-input -->
+        <input type="password" placeholder="Enter Password" name="password" required>
         
-        <label><input type="checkbox" checked="checked" name="remember"> Remember me</label> 
+        <label><input type="checkbox" checked="checked" name="remember"> Remember me </label> 
         <button type="submit" class="loginbtn">Login</button><!-- login-button -->
         <p>Do not have an acount? <a href="/signup" style="color: #04AA6D;">Sign Up</a></p>
       </div>
