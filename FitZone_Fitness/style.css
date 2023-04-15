@@ -13,6 +13,65 @@ html,body
     box-sizing: border-box;
 
 }
+
+
+
+/* CSS on nav */
+nav {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+}
+#navbarText {
+    margin-left: 110px;
+    margin-right: 20px;
+}
+.nav-item {
+    padding: 0px 30px;
+    font-weight: bolder;
+}
+/* right Most corner */
+.lastpart {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    padding: 0px 30px;
+    cursor: pointer;
+}
+.location {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding: 10px;
+}
+.location i {
+    margin-top: 12px;
+    margin-left: 10px;
+}
+.avatar {
+    padding: 10px;
+}
+.cart {
+    padding: 10px;
+}
+
+/* Fixed-navbar */
+.fixed-nav {
+    display: flex;
+    justify-content: center;
+    background-color: #393A3B;
+    margin-bottom: 50px;
+}
+.refresh-button {
+    padding: 6px 20px 6px 20px;
+    margin: 6px 20px 6px 20px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+
+
 .navbar{
     
     width: 100%;
@@ -105,7 +164,7 @@ h5 {
     top: 0px;
     left: 0px;
     width: 1000%;
-    height: 1000%
+    height: 1000%;
     margin:auto;
 }
 .style-prefix-dm8egi {
@@ -308,7 +367,7 @@ img {
     -webkit-backface-visibility: hidden;
     -webkit-perspective: 1000px;
     -webkit-transform: translate3d(0,0,0);
- .back::before{
+ /* .back::before{
     content: "";
     position: absolute;
     height: 0px;
@@ -317,7 +376,7 @@ img {
     left: 0px;
     background :linear-gradient(90deg , #fe9418 0% , #f5634b 100%);
     z-index: -1;
-    transition: all 0.8s;
+    transition: all 0.8s; */
  }
  .back:hover::before{
     height: 100%;
@@ -435,4 +494,58 @@ img {
     float: left;
     height: 100%;
     min-height: 1px;
+}
+
+
+
+/* CSS on footer */
+footer {
+    top: 100%;
+    bottom: 0%;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    background-color: #393A3B;
+    color: white;
+}
+
+.footer-container,
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.cultfit-moto {
+    margin: 25px 90px 25px 90px;
+    width: 20%;
+}
+
+.cultfit-moto .moto {
+    margin-top: 25px;
+    font-size: smaller;
+    font-weight: bold;
+}
+
+.childcompanys-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 15%;
+}
+
+.blogAndStuff {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 15%;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 15%;
+    margin-right: 60px;
 }

@@ -1,3 +1,9 @@
+# Mac default file
 .DS_Store
-FitZone_Fitness/node_modules
-FitZone_Fitness/package-lock.json
+
+# Node modules
+FitZone/*/node_modules
+FitZone_Mind/node_modules
+
+#Temporary working file
+./dropforCities.txt
