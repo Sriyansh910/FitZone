@@ -1,13 +1,38 @@
 //onclick for cities list
-const mycity = document.getElementById('cityName');
-const overlay = document.getElementById('overlay');
+// const mycity = document.getElementById('cityName');
+// const overlay = document.getElementById('overlay');
 
-mycity.addEventListener('click',() => {
-    overlay.style.display = "block";
-});
-overlay.addEventListener('click',() => {
-    overlay.style.display = "none";
-});
+function toggleCityList() {
+    var cityList = document.getElementById("city-list");
+    if (cityList.style.display === "block") {
+      cityList.style.display = "none";
+      overlay.style.display = "none";
+    } else {
+      cityList.style.display = "block";
+      overlay.style.display = "block";
+    }
+}
+function searchCities() {
+    var input, filter, ul, li, i, txtValue;
+    input = document.getElementById("city-search");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("cities");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+      txtValue = li[i].textContent || li[i].innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+}
+function selectCity(city) {
+    var cityName = city.textContent;
+    var cityHeader = document.getElementById("city-header");
+    cityHeader.textContent = cityName;
+    toggleCityList();
+}
 
 //login-user 
 const userBtn = document.getElementById('login-user');

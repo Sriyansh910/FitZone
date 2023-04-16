@@ -26,7 +26,35 @@
   </div>
   <!-- overlay Effect -->
   <div id="overlay">
-    
+    <div class="city-container" id="cityName">
+      <div class="city-list" id="city-list">
+        <dir class="city-search">
+          <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #fff;"></i>
+          <input type="text" id="city-search" onkeyup="searchCities()" placeholder="Search cities...">
+        </dir>
+        <ul id="cities">
+          <div class="tag-cities"><b>Popular Cities</b></div><hr>
+          <li onclick="selectCity(this)">Bangalore</li>
+          <li onclick="selectCity(this)">Delhi</li>
+          <li onclick="selectCity(this)">Mumbai</li>
+          <li onclick="selectCity(this)">Jaipur</li>
+          <li onclick="selectCity(this)">Chennai</li>
+          <div class="tag-cities"><b>Other Cities</b></div><hr>
+          <li onclick="selectCity(this)">Kolkata</li>
+          <li onclick="selectCity(this)">Pune</li>
+          <li onclick="selectCity(this)">Ahmedabad</li>
+          <li onclick="selectCity(this)">Hyderabad</li>
+          <li onclick="selectCity(this)">Lucknow</li>
+          <li onclick="selectCity(this)">Indore</li>
+          <li onclick="selectCity(this)">Visakhapatnam</li>
+          <li onclick="selectCity(this)">Kota</li>
+          <li onclick="selectCity(this)">Goa</li>
+          <li onclick="selectCity(this)">Thiruvananthapuram</li>
+          <li onclick="selectCity(this)">Udaipur</li>
+          <li onclick="selectCity(this)">Rampura</li>
+        </ul>
+      </div>
+    </div>
   </div>
   <!-- login-user -->
   <div id="loginPageId" class="modal">
