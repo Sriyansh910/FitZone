@@ -27,61 +27,8 @@ nav {
     padding: 0px 30px;
 }
 /* location-city */
-.city-container {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    position: relative;
-}
-.city-container i {
-    margin-top: 12px;
-    margin-left: 10px;
-}
 .city-header {
-    background-color: #000000;
-    border: 0.5px groove rgba(255, 255, 255, 0.653);
-    border-radius: 5px;
-    font-size: 20px;
-    padding: 5px;
-    text-align: center;
-    width: 150px;
-}
-.city-list {
-    display: none;
-    background-color: #393A3B;
-    border: 1px solid rgba(255, 255, 255, 0.485);
-    border-radius: 5px;
-    top: 45px;
-    left: 0;
-    position: absolute;
-    width: 250px;
-    z-index: 2;
-}
-#city-search {
-    border: 1px solid #ccc;
-    color: #000;
-    border-radius: 5px;
-    margin: 5px;
-    padding: 5px;
-    width: 90%;
-}
-/* inside list */
-#cities {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}  
-#cities li {
-    border-bottom: 1px solid #ccc;
-    cursor: pointer;
-    padding: 10px;
-    text-align: left;
-}
-#cities li:last-child {
-    border-bottom: none;
-}
-#cities li:hover {
-    background-color: gray;
+   display: none;
 }
 .avatar{
     padding: 10px;
